@@ -8,8 +8,35 @@ const WordleGame = () => {
   const [gameOver, setGameOver] = useState(false);
   const [currentRow, setCurrentRow] = useState(0);
 
-  // List of 4-letter words - you can expand this list
-  const wordList = ['cake', 'take', 'make', 'lake', 'fake', 'wake', 'bake', 'sake'];
+  // List of 4-letter words
+  const wordList = [
+    'love', 'hope', 'well', 'like', 'time', 'good', 'play', 'keep',
+    'area', 'able', 'atom', 'both', 'best', 'back', 'busy', 'cool',
+    'come', 'cave', 'city', 'dear', 'down', 'dusk', 'doom', 'easy',
+    'ever', 'edit', 'echo', 'fast', 'fine', 'fear', 'fact', 'gold',
+    'give', 'gaze', 'hail', 'harm', 'idea', 'into', 'iron', 'icon',
+    'just', 'join', 'jury', 'jail', 'kind', 'knot', 'king', 'luck',
+    'loud', 'more', 'much', 'many', 'mind', 'name', 'near', 'need',
+    'note', 'open', 'only', 'once', 'over', 'part', 'plan', 'poor',
+    'quiz', 'quit', 'quiet', 'quad', 'bird', 'jump', 'baby', 'book',
+    'duck', 'frog', 'ball', 'duck', 'bank', 'bear', 'beat', 'blow',
+    'burn', 'call', 'care', 'cast', 'come', 'cook', 'cope', 'cost',
+    'dare', 'deal', 'deny', 'draw', 'drop', 'earn', 'face', 'fail',
+    'fall', 'fear', 'feel', 'fill', 'find', 'form', 'gain', 'give',
+    'grow', 'hang', 'hate', 'have', 'head', 'hear', 'help', 'hide',
+    'hold', 'hope', 'hurt', 'join', 'jump', 'keep', 'kill', 'know',
+    'land', 'last', 'lead', 'lend', 'lift', 'like', 'link', 'live',
+    'look', 'lose', 'love', 'make', 'mark', 'meet', 'mind', 'miss',
+    'move', 'must', 'name', 'need', 'note', 'open', 'pass', 'pick',
+    'plan', 'play', 'pray', 'pull', 'push', 'read', 'rely', 'rest',
+    'ride', 'ring', 'rise', 'risk', 'roll', 'rule', 'save', 'seek',
+    'seem', 'sell', 'send', 'shed', 'show', 'shut', 'sign', 'sing',
+    'slip', 'sort', 'stay', 'step', 'stop', 'suit', 'take', 'talk',
+    'tell', 'tend', 'test', 'turn', 'vary', 'view', 'vote', 'wait',
+    'wake', 'walk', 'want', 'warn', 'wash', 'zest', 'quip', 'yolk',
+    'ploy', 'myth', 'joey', 'zany', 'yurt', 'ease', 'else', 'even',
+    'ever', 'earn', 'exit', 'east', 'edgy', 'ends', 'emit'
+  ];
 
   useEffect(() => {
     // Pick a random word when game starts
